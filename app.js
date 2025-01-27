@@ -21,31 +21,24 @@ app.set("view engine", "handlebars");
 app.set("views", "./views");
 
 // Manipulação de dados via rotas
-//app.use(express.json());
-//app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 // Configuração para servir arquivos estáticos
 app.use(express.static(path.join(__dirname, "public")));
 
-// Configuração de conexão com o banco
-/*const conexao = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "123456",
-  database: "projeto",
-});*/
-
-// Mensagem de conexão
-/*conexao.connect(function (erro) {
-  if (erro) throw erro;
-  console.log("Conexão com o DB ok!");
-});*/
-
 // Rotas
 app.get("/", (req, res) => {
-  res.render("home", { title: "Home", cabecalho: "Página Inicial" });
+  res.render("index", { title: "Home"});
 });
 
+app.get("/cadastrar", (req, res) => {
+  res.render("cadastrar", { title: "Cadastrar"});
+});
+
+app.get("/consultar", (req, res) => {
+  res.render("consultar", { title: "Consultar"});
+});
 
 /*app.post("/cadastrar", (req, res) => {
   console.log(req.body);

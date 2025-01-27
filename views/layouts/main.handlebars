@@ -2,18 +2,17 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <link rel="stySlesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/public/css/style.css">
-    <title>Sidebar</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <nav id="sidebar">
         <div id="sidebar_content">
             <div id="user">
-                <img src="/public/images/user.jpg" id="user_avatar" alt="Avatar">
+                <img src="/images/user.jpg" id="user_avatar" alt="Avatar">
     
                 <p id="user_infos">
                     <span class="item-description">
@@ -30,7 +29,27 @@
                     <a href="/">
                         <i class="fa-solid fa-house"></i>
                         <span class="item-description">
-                            Dashboard
+                            Home
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <ul id="side_items">
+                <li class="side-item active">
+                    <a href="/cadastrar">
+                        <i class="fa-solid fa-plus"></i>
+                        <span class="item-description">
+                            Cadastrar Produtor
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <ul id="side_items">
+                <li class="side-item active">
+                    <a href="/consultar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span class="item-description">
+                            Consultar Produtor
                         </span>
                     </a>
                 </li>
@@ -44,8 +63,8 @@
     </nav>
 
     <main>
-        <h1>Sistema de Cadastro de Produto</h1>
+        <h1>{{title}}</h1>
     </main>
-    <script src="/public/javascript/script.js"></script>
+    <script src="/javascript/script.js"></script>
 </body>
 </html>
